@@ -12,6 +12,10 @@ namespace Inquisitor
 {
     public partial class Inquisitor : Form
     {
+        int Lvl3Bonus;
+        int Lvl5Bonus;
+
+
         public Inquisitor()
         {
             InitializeComponent();
@@ -19,8 +23,23 @@ namespace Inquisitor
 
         private void Inquisitor_Load(object sender, EventArgs e)
         {
-            nupLv3.Value = (1 + (nupLevel.Value / 5));
-            nupLv5.Value = (1 + (nupLevel.Value / 3));
+            Lvl3Bonus = (int)(1 + (nupLevel.Value / 5));
+            Lvl5Bonus = (int)(1 + (nupLevel.Value / 3));
+            nupLv3.Value = Lvl3Bonus;
+            nupLv5.Value = Lvl5Bonus;
+        }
+
+        public int D(int Die)
+        {
+            Random rnd = new Random();
+            int max = Die + 1;
+            int dice = rnd.Next(1, max);
+            return dice;
+        }
+
+        private void btnD20_Click(object sender, EventArgs e)
+        {
+            txtD20.Text = (D(20)).ToString();
         }
     }
 }

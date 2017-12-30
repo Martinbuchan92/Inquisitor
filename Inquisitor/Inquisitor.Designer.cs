@@ -184,6 +184,7 @@
             this.btnD20.TabIndex = 9;
             this.btnD20.Text = "D20";
             this.btnD20.UseVisualStyleBackColor = true;
+            this.btnD20.Click += new System.EventHandler(this.btnD20_Click);
             // 
             // txtD20
             // 
