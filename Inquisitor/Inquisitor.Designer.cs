@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inquisitor));
             this.nupBAB = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@
             this.nupWeaponEnhancementBonus = new System.Windows.Forms.NumericUpDown();
             this.btnD20 = new System.Windows.Forms.Button();
             this.txtD20 = new System.Windows.Forms.TextBox();
-            this.nupLevel = new System.Windows.Forms.NumericUpDown();
+            this.nupLVL = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chkBane = new System.Windows.Forms.CheckBox();
@@ -52,17 +53,22 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chkEvil = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAttack = new System.Windows.Forms.TextBox();
             this.btnAttack = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDamage = new System.Windows.Forms.TextBox();
             this.btnDamage = new System.Windows.Forms.Button();
+            this.chkRapidShot = new System.Windows.Forms.CheckBox();
+            this.chkPointBlank = new System.Windows.Forms.CheckBox();
+            this.ChkCrit = new System.Windows.Forms.CheckBox();
+            this.txtTotalDamage = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupBAB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSTR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDEX)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupWeaponEnhancementBonus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupLVL)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupLv5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupLv3)).BeginInit();
@@ -82,6 +88,7 @@
             0,
             0,
             0});
+            this.nupBAB.ValueChanged += new System.EventHandler(this.nupBAB_ValueChanged);
             // 
             // label1
             // 
@@ -140,7 +147,7 @@
             this.groupBox1.Controls.Add(this.nupWeaponEnhancementBonus);
             this.groupBox1.Controls.Add(this.btnD20);
             this.groupBox1.Controls.Add(this.txtD20);
-            this.groupBox1.Controls.Add(this.nupLevel);
+            this.groupBox1.Controls.Add(this.nupLVL);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.nupSTR);
             this.groupBox1.Controls.Add(this.nupDEX);
@@ -178,7 +185,7 @@
             // 
             // btnD20
             // 
-            this.btnD20.Location = new System.Drawing.Point(166, 252);
+            this.btnD20.Location = new System.Drawing.Point(19, 247);
             this.btnD20.Name = "btnD20";
             this.btnD20.Size = new System.Drawing.Size(120, 40);
             this.btnD20.TabIndex = 9;
@@ -188,22 +195,23 @@
             // 
             // txtD20
             // 
-            this.txtD20.Location = new System.Drawing.Point(19, 257);
+            this.txtD20.Location = new System.Drawing.Point(166, 252);
             this.txtD20.Name = "txtD20";
             this.txtD20.Size = new System.Drawing.Size(100, 31);
             this.txtD20.TabIndex = 8;
             // 
-            // nupLevel
+            // nupLVL
             // 
-            this.nupLevel.Location = new System.Drawing.Point(166, 45);
-            this.nupLevel.Name = "nupLevel";
-            this.nupLevel.Size = new System.Drawing.Size(120, 31);
-            this.nupLevel.TabIndex = 7;
-            this.nupLevel.Value = new decimal(new int[] {
+            this.nupLVL.Location = new System.Drawing.Point(166, 45);
+            this.nupLVL.Name = "nupLVL";
+            this.nupLVL.Size = new System.Drawing.Size(120, 31);
+            this.nupLVL.TabIndex = 7;
+            this.nupLVL.Value = new decimal(new int[] {
             12,
             0,
             0,
             0});
+            this.nupLVL.ValueChanged += new System.EventHandler(this.nupLVL_ValueChanged);
             // 
             // label6
             // 
@@ -216,6 +224,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.chkPointBlank);
+            this.groupBox2.Controls.Add(this.chkRapidShot);
             this.groupBox2.Controls.Add(this.chkBane);
             this.groupBox2.Controls.Add(this.chkJustice);
             this.groupBox2.Controls.Add(this.chkDestruction);
@@ -314,7 +324,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.txtAttack);
             this.groupBox4.Controls.Add(this.btnAttack);
             this.groupBox4.Location = new System.Drawing.Point(16, 409);
             this.groupBox4.Name = "groupBox4";
@@ -323,13 +333,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Attack";
             // 
-            // textBox1
+            // txtAttack
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 35);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(787, 96);
-            this.textBox1.TabIndex = 1;
+            this.txtAttack.Location = new System.Drawing.Point(22, 35);
+            this.txtAttack.Multiline = true;
+            this.txtAttack.Name = "txtAttack";
+            this.txtAttack.Size = new System.Drawing.Size(787, 96);
+            this.txtAttack.TabIndex = 1;
             // 
             // btnAttack
             // 
@@ -339,10 +349,14 @@
             this.btnAttack.TabIndex = 0;
             this.btnAttack.Text = "Attack";
             this.btnAttack.UseVisualStyleBackColor = true;
+            this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox2);
+            this.groupBox5.Controls.Add(this.ChkCrit);
+            this.groupBox5.Controls.Add(this.btnClear);
+            this.groupBox5.Controls.Add(this.txtTotalDamage);
+            this.groupBox5.Controls.Add(this.txtDamage);
             this.groupBox5.Controls.Add(this.btnDamage);
             this.groupBox5.Location = new System.Drawing.Point(16, 553);
             this.groupBox5.Name = "groupBox5";
@@ -351,13 +365,13 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Damage";
             // 
-            // textBox2
+            // txtDamage
             // 
-            this.textBox2.Location = new System.Drawing.Point(22, 40);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(787, 96);
-            this.textBox2.TabIndex = 2;
+            this.txtDamage.Location = new System.Drawing.Point(22, 40);
+            this.txtDamage.Multiline = true;
+            this.txtDamage.Name = "txtDamage";
+            this.txtDamage.Size = new System.Drawing.Size(618, 96);
+            this.txtDamage.TabIndex = 2;
             // 
             // btnDamage
             // 
@@ -367,6 +381,54 @@
             this.btnDamage.TabIndex = 1;
             this.btnDamage.Text = "Damage";
             this.btnDamage.UseVisualStyleBackColor = true;
+            this.btnDamage.Click += new System.EventHandler(this.btnDamage_Click);
+            // 
+            // chkRapidShot
+            // 
+            this.chkRapidShot.AutoSize = true;
+            this.chkRapidShot.Location = new System.Drawing.Point(33, 276);
+            this.chkRapidShot.Name = "chkRapidShot";
+            this.chkRapidShot.Size = new System.Drawing.Size(150, 29);
+            this.chkRapidShot.TabIndex = 7;
+            this.chkRapidShot.Text = "Rapid Shot";
+            this.chkRapidShot.UseVisualStyleBackColor = true;
+            // 
+            // chkPointBlank
+            // 
+            this.chkPointBlank.AutoSize = true;
+            this.chkPointBlank.Location = new System.Drawing.Point(33, 311);
+            this.chkPointBlank.Name = "chkPointBlank";
+            this.chkPointBlank.Size = new System.Drawing.Size(207, 29);
+            this.chkPointBlank.TabIndex = 8;
+            this.chkPointBlank.Text = "Point Blank <30ft";
+            this.chkPointBlank.UseVisualStyleBackColor = true;
+            // 
+            // ChkCrit
+            // 
+            this.ChkCrit.AutoSize = true;
+            this.ChkCrit.Location = new System.Drawing.Point(677, 107);
+            this.ChkCrit.Name = "ChkCrit";
+            this.ChkCrit.Size = new System.Drawing.Size(77, 29);
+            this.ChkCrit.TabIndex = 2;
+            this.ChkCrit.Text = "Crit";
+            this.ChkCrit.UseVisualStyleBackColor = true;
+            // 
+            // txtTotalDamage
+            // 
+            this.txtTotalDamage.Location = new System.Drawing.Point(677, 49);
+            this.txtTotalDamage.Name = "txtTotalDamage";
+            this.txtTotalDamage.Size = new System.Drawing.Size(100, 31);
+            this.txtTotalDamage.TabIndex = 3;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(875, 35);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(144, 45);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Inquisitor
             // 
@@ -378,6 +440,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inquisitor";
             this.Text = "Inquisitor";
             this.Load += new System.EventHandler(this.Inquisitor_Load);
@@ -387,7 +450,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupWeaponEnhancementBonus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupLVL)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupLv5)).EndInit();
@@ -415,7 +478,7 @@
         private System.Windows.Forms.NumericUpDown nupWeaponEnhancementBonus;
         private System.Windows.Forms.Button btnD20;
         private System.Windows.Forms.TextBox txtD20;
-        private System.Windows.Forms.NumericUpDown nupLevel;
+        private System.Windows.Forms.NumericUpDown nupLVL;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox chkBane;
@@ -429,10 +492,15 @@
         private System.Windows.Forms.CheckBox chkEvil;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAttack;
         private System.Windows.Forms.Button btnAttack;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDamage;
         private System.Windows.Forms.Button btnDamage;
+        private System.Windows.Forms.CheckBox chkPointBlank;
+        private System.Windows.Forms.CheckBox chkRapidShot;
+        private System.Windows.Forms.CheckBox ChkCrit;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox txtTotalDamage;
     }
 }
 
