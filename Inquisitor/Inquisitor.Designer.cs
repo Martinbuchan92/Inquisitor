@@ -43,6 +43,8 @@
             this.nupLVL = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkPointBlank = new System.Windows.Forms.CheckBox();
+            this.chkRapidShot = new System.Windows.Forms.CheckBox();
             this.chkBane = new System.Windows.Forms.CheckBox();
             this.chkJustice = new System.Windows.Forms.CheckBox();
             this.chkDestruction = new System.Windows.Forms.CheckBox();
@@ -56,13 +58,13 @@
             this.txtAttack = new System.Windows.Forms.TextBox();
             this.btnAttack = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.ChkCrit = new System.Windows.Forms.CheckBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.txtTotalDamage = new System.Windows.Forms.TextBox();
             this.txtDamage = new System.Windows.Forms.TextBox();
             this.btnDamage = new System.Windows.Forms.Button();
-            this.chkRapidShot = new System.Windows.Forms.CheckBox();
-            this.chkPointBlank = new System.Windows.Forms.CheckBox();
-            this.ChkCrit = new System.Windows.Forms.CheckBox();
-            this.txtTotalDamage = new System.Windows.Forms.TextBox();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.chkHammerGap = new System.Windows.Forms.CheckBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.nupBAB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSTR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDEX)).BeginInit();
@@ -75,6 +77,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // nupBAB
@@ -207,7 +210,7 @@
             this.nupLVL.Size = new System.Drawing.Size(120, 31);
             this.nupLVL.TabIndex = 7;
             this.nupLVL.Value = new decimal(new int[] {
-            12,
+            13,
             0,
             0,
             0});
@@ -224,8 +227,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.chkPointBlank);
-            this.groupBox2.Controls.Add(this.chkRapidShot);
             this.groupBox2.Controls.Add(this.chkBane);
             this.groupBox2.Controls.Add(this.chkJustice);
             this.groupBox2.Controls.Add(this.chkDestruction);
@@ -239,6 +240,26 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Judgement";
+            // 
+            // chkPointBlank
+            // 
+            this.chkPointBlank.AutoSize = true;
+            this.chkPointBlank.Location = new System.Drawing.Point(21, 89);
+            this.chkPointBlank.Name = "chkPointBlank";
+            this.chkPointBlank.Size = new System.Drawing.Size(207, 29);
+            this.chkPointBlank.TabIndex = 8;
+            this.chkPointBlank.Text = "Point Blank <30ft";
+            this.chkPointBlank.UseVisualStyleBackColor = true;
+            // 
+            // chkRapidShot
+            // 
+            this.chkRapidShot.AutoSize = true;
+            this.chkRapidShot.Location = new System.Drawing.Point(21, 54);
+            this.chkRapidShot.Name = "chkRapidShot";
+            this.chkRapidShot.Size = new System.Drawing.Size(150, 29);
+            this.chkRapidShot.TabIndex = 7;
+            this.chkRapidShot.Text = "Rapid Shot";
+            this.chkRapidShot.UseVisualStyleBackColor = true;
             // 
             // chkBane
             // 
@@ -307,7 +328,7 @@
             this.groupBox3.Controls.Add(this.chkEvil);
             this.groupBox3.Location = new System.Drawing.Point(726, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(316, 381);
+            this.groupBox3.Size = new System.Drawing.Size(316, 146);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Enemy";
@@ -365,6 +386,33 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Damage";
             // 
+            // ChkCrit
+            // 
+            this.ChkCrit.AutoSize = true;
+            this.ChkCrit.Location = new System.Drawing.Point(677, 107);
+            this.ChkCrit.Name = "ChkCrit";
+            this.ChkCrit.Size = new System.Drawing.Size(77, 29);
+            this.ChkCrit.TabIndex = 2;
+            this.ChkCrit.Text = "Crit";
+            this.ChkCrit.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(875, 35);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(144, 45);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // txtTotalDamage
+            // 
+            this.txtTotalDamage.Location = new System.Drawing.Point(677, 49);
+            this.txtTotalDamage.Name = "txtTotalDamage";
+            this.txtTotalDamage.Size = new System.Drawing.Size(100, 31);
+            this.txtTotalDamage.TabIndex = 3;
+            // 
             // txtDamage
             // 
             this.txtDamage.Location = new System.Drawing.Point(22, 40);
@@ -383,58 +431,36 @@
             this.btnDamage.UseVisualStyleBackColor = true;
             this.btnDamage.Click += new System.EventHandler(this.btnDamage_Click);
             // 
-            // chkRapidShot
+            // chkHammerGap
             // 
-            this.chkRapidShot.AutoSize = true;
-            this.chkRapidShot.Location = new System.Drawing.Point(33, 276);
-            this.chkRapidShot.Name = "chkRapidShot";
-            this.chkRapidShot.Size = new System.Drawing.Size(150, 29);
-            this.chkRapidShot.TabIndex = 7;
-            this.chkRapidShot.Text = "Rapid Shot";
-            this.chkRapidShot.UseVisualStyleBackColor = true;
+            this.chkHammerGap.AutoSize = true;
+            this.chkHammerGap.Checked = true;
+            this.chkHammerGap.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkHammerGap.Location = new System.Drawing.Point(21, 123);
+            this.chkHammerGap.Name = "chkHammerGap";
+            this.chkHammerGap.Size = new System.Drawing.Size(206, 29);
+            this.chkHammerGap.TabIndex = 1;
+            this.chkHammerGap.Text = "Hammer the Gap";
+            this.chkHammerGap.UseVisualStyleBackColor = true;
             // 
-            // chkPointBlank
+            // groupBox6
             // 
-            this.chkPointBlank.AutoSize = true;
-            this.chkPointBlank.Location = new System.Drawing.Point(33, 311);
-            this.chkPointBlank.Name = "chkPointBlank";
-            this.chkPointBlank.Size = new System.Drawing.Size(207, 29);
-            this.chkPointBlank.TabIndex = 8;
-            this.chkPointBlank.Text = "Point Blank <30ft";
-            this.chkPointBlank.UseVisualStyleBackColor = true;
-            // 
-            // ChkCrit
-            // 
-            this.ChkCrit.AutoSize = true;
-            this.ChkCrit.Location = new System.Drawing.Point(677, 107);
-            this.ChkCrit.Name = "ChkCrit";
-            this.ChkCrit.Size = new System.Drawing.Size(77, 29);
-            this.ChkCrit.TabIndex = 2;
-            this.ChkCrit.Text = "Crit";
-            this.ChkCrit.UseVisualStyleBackColor = true;
-            // 
-            // txtTotalDamage
-            // 
-            this.txtTotalDamage.Location = new System.Drawing.Point(677, 49);
-            this.txtTotalDamage.Name = "txtTotalDamage";
-            this.txtTotalDamage.Size = new System.Drawing.Size(100, 31);
-            this.txtTotalDamage.TabIndex = 3;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(875, 35);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(144, 45);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.groupBox6.Controls.Add(this.chkPointBlank);
+            this.groupBox6.Controls.Add(this.chkHammerGap);
+            this.groupBox6.Controls.Add(this.chkRapidShot);
+            this.groupBox6.Location = new System.Drawing.Point(726, 170);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(315, 223);
+            this.groupBox6.TabIndex = 11;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Feats";
             // 
             // Inquisitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 725);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -461,6 +487,8 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -501,6 +529,8 @@
         private System.Windows.Forms.CheckBox ChkCrit;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtTotalDamage;
+        private System.Windows.Forms.CheckBox chkHammerGap;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }
 

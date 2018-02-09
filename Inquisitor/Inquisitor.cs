@@ -23,6 +23,7 @@ namespace Inquisitor
         int items = 1;
         int TotalDamage;
         Random rnd = new Random();
+        int HammerGapCount;
 
 
         public Inquisitor()
@@ -56,6 +57,7 @@ namespace Inquisitor
         {
             int toHit = BAB + DEX + WepEnh + items;
             int attacks;
+            String attack = "";
 
             txtAttack.Clear();
 
@@ -100,9 +102,11 @@ namespace Inquisitor
                 }
 
                 int roll = D(20);
-                txtAttack.Text += (toHit + roll).ToString() + "(" + roll + ")" + "/";
+                attack += (toHit + roll).ToString() + "(" + roll + ")" + "/";
 
             }
+            attack = attack.TrimEnd(new char[] { '/' });
+            txtAttack.Text = attack;
         }
 
         private void nupLVL_ValueChanged(object sender, EventArgs e)
@@ -144,16 +148,23 @@ namespace Inquisitor
             {
                 Damage += Lvl3Bonus;
             }
+            if (chkHammerGap.Checked)
+            {
+                Damage += HammerGapCount;
+            }
             Damage += D(8);
 
+            
             TotalDamage += Damage;
             txtDamage.Text = Damage.ToString();
             txtTotalDamage.Text = TotalDamage.ToString();
+            HammerGapCount += 1;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             TotalDamage = 0;
+            HammerGapCount = 0;
             txtTotalDamage.Clear();
             txtDamage.Clear();
             txtAttack.Clear();
