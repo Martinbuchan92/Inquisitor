@@ -43,8 +43,7 @@
             this.nupLVL = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chkPointBlank = new System.Windows.Forms.CheckBox();
-            this.chkRapidShot = new System.Windows.Forms.CheckBox();
+            this.btnSpellList = new System.Windows.Forms.Button();
             this.chkBane = new System.Windows.Forms.CheckBox();
             this.chkJustice = new System.Windows.Forms.CheckBox();
             this.chkDestruction = new System.Windows.Forms.CheckBox();
@@ -52,6 +51,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.nupLv3 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.chkPointBlank = new System.Windows.Forms.CheckBox();
+            this.chkRapidShot = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chkEvil = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -227,6 +228,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSpellList);
             this.groupBox2.Controls.Add(this.chkBane);
             this.groupBox2.Controls.Add(this.chkJustice);
             this.groupBox2.Controls.Add(this.chkDestruction);
@@ -241,25 +243,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Judgement";
             // 
-            // chkPointBlank
+            // btnSpellList
             // 
-            this.chkPointBlank.AutoSize = true;
-            this.chkPointBlank.Location = new System.Drawing.Point(21, 89);
-            this.chkPointBlank.Name = "chkPointBlank";
-            this.chkPointBlank.Size = new System.Drawing.Size(207, 29);
-            this.chkPointBlank.TabIndex = 8;
-            this.chkPointBlank.Text = "Point Blank <30ft";
-            this.chkPointBlank.UseVisualStyleBackColor = true;
-            // 
-            // chkRapidShot
-            // 
-            this.chkRapidShot.AutoSize = true;
-            this.chkRapidShot.Location = new System.Drawing.Point(21, 54);
-            this.chkRapidShot.Name = "chkRapidShot";
-            this.chkRapidShot.Size = new System.Drawing.Size(150, 29);
-            this.chkRapidShot.TabIndex = 7;
-            this.chkRapidShot.Text = "Rapid Shot";
-            this.chkRapidShot.UseVisualStyleBackColor = true;
+            this.btnSpellList.Location = new System.Drawing.Point(6, 340);
+            this.btnSpellList.Name = "btnSpellList";
+            this.btnSpellList.Size = new System.Drawing.Size(246, 36);
+            this.btnSpellList.TabIndex = 7;
+            this.btnSpellList.Text = "Spell List";
+            this.btnSpellList.UseVisualStyleBackColor = true;
+            this.btnSpellList.Click += new System.EventHandler(this.btnSpellList_Click);
             // 
             // chkBane
             // 
@@ -322,6 +314,26 @@
             this.label4.Size = new System.Drawing.Size(82, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "3 Level";
+            // 
+            // chkPointBlank
+            // 
+            this.chkPointBlank.AutoSize = true;
+            this.chkPointBlank.Location = new System.Drawing.Point(21, 89);
+            this.chkPointBlank.Name = "chkPointBlank";
+            this.chkPointBlank.Size = new System.Drawing.Size(207, 29);
+            this.chkPointBlank.TabIndex = 8;
+            this.chkPointBlank.Text = "Point Blank <30ft";
+            this.chkPointBlank.UseVisualStyleBackColor = true;
+            // 
+            // chkRapidShot
+            // 
+            this.chkRapidShot.AutoSize = true;
+            this.chkRapidShot.Location = new System.Drawing.Point(21, 54);
+            this.chkRapidShot.Name = "chkRapidShot";
+            this.chkRapidShot.Size = new System.Drawing.Size(150, 29);
+            this.chkRapidShot.TabIndex = 7;
+            this.chkRapidShot.Text = "Rapid Shot";
+            this.chkRapidShot.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -466,6 +478,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inquisitor";
             this.Text = "Inquisitor";
@@ -531,6 +544,7 @@
         private System.Windows.Forms.TextBox txtTotalDamage;
         private System.Windows.Forms.CheckBox chkHammerGap;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button btnSpellList;
     }
 }
 

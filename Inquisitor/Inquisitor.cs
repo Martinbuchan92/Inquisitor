@@ -174,5 +174,11 @@ namespace Inquisitor
         {
             BAB = (int)nupBAB.Value;
         }
+
+        private void btnSpellList_Click(object sender, EventArgs e)
+        {
+            spells spellsForm = new spells();
+            spellsForm.Show();
+        }
     }
 }
