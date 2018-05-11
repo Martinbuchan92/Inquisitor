@@ -17,14 +17,19 @@ namespace Inquisitor
         int BAB;
         int DEX;
         int STR;
+        int CON;
+        int INT;
+        int WIS;
+        int CHA;
         int WepEnh;
         int LVL;
         //Bracers +1
-        int items = 1;
+        int items = 2;
         int TotalDamage;
         Random rnd = new Random();
         int HammerGapCount;
-
+        String[] inputLines;
+        String[] abilities;
 
         public Inquisitor()
         {
@@ -33,12 +38,12 @@ namespace Inquisitor
 
         private void Inquisitor_Load(object sender, EventArgs e)
         {
+            LoadInformation();
+            LoadAbilities();
             CalcJudgements();
-            BAB = (int)nupBAB.Value;
-            DEX = (int)nupDEX.Value;
-            STR = (int)nupSTR.Value;
-            LVL = (int)nupLVL.Value;
             WepEnh = (int)nupWeaponEnhancementBonus.Value;
+
+            txtToolStrip.Text = "Loaded";
         }
 
         public int D(int Die)
@@ -179,6 +184,94 @@ namespace Inquisitor
         {
             spells spellsForm = new spells();
             spellsForm.Show();
+        }
+
+        private void btnSkills_Click(object sender, EventArgs e)
+        {
+            skills skillsForm = new skills();
+            skillsForm.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            BAB = (int)nupBAB.Value;
+            DEX = (int)nupDEX.Value;
+            STR = (int)nupSTR.Value;
+            LVL = (int)nupLVL.Value;
+
+
+            String[] stats = { BAB.ToString(), DEX.ToString(), STR.ToString(), LVL.ToString() };
+
+
+            txtToolStrip.Text = "Saved";
+        }
+
+        private void LoadInformation()
+        {
+            inputLines = System.IO.File.ReadAllLines(@"C:\Users\intro\documents\Inquisitor\inquisitor1.txt");
+
+            BAB = int.Parse(inputLines[0]);
+            DEX = int.Parse(inputLines[1]);
+            STR = int.Parse(inputLines[2]);
+            LVL = int.Parse(inputLines[3]);
+
+            nupBAB.Value = BAB;
+            nupDEX.Value = DEX;
+            nupSTR.Value = STR;
+            nupLVL.Value = LVL;
+
+        }
+
+        private void LoadAbilities()
+        {
+            String[] inputabilities = Program.Read("ABILITIES");
+
+            STR = int.Parse(inputabilities[0]);
+            DEX = int.Parse(inputabilities[1]);
+            CON = int.Parse(inputabilities[2]);
+            INT = int.Parse(inputabilities[3]);
+            WIS = int.Parse(inputabilities[4]);
+            CHA = int.Parse(inputabilities[5]);
+
+            nupSTR.Value = STR;
+            nupDEX.Value = DEX;
+            nupCON.Value = CON;
+            nupINT.Value = INT;
+            nupWIS.Value = WIS;
+            nupCHA.Value = CHA;
+
+        }
+
+        private void SaveAbilities()
+        {
+            abilities = new String[]{
+                STR.ToString(),
+                DEX.ToString(),
+                CON.ToString(),
+                INT.ToString(),
+                WIS.ToString(),
+                CHA.ToString()};
+
+           Program.Write("ABILITIES", abilities);
+            txtToolStrip.Text = "Saved";
+
+            STR = (int)nupSTR.Value;
+            DEX = (int)nupDEX.Value;
+            CON = (int)nupCON.Value;
+            INT = (int)nupINT.Value;
+            WIS = (int)nupWIS.Value;
+            CHA = (int)nupCHA.Value;
+
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            LoadInformation();
         }
     }
 }
