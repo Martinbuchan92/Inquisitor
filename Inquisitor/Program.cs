@@ -9,7 +9,7 @@ namespace Inquisitor
     static class Program
     {
 
-        const String PATH = @"C:\Users\intro\Documents\Inquisitor\";
+        const String PATH = @"..\..\stats\";
 
         /// <summary>
         /// The main entry point for the application.

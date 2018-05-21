@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="d20-icon-34404-16x16.ico" />
+    <None Include="Resources\text1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -213,7 +213,7 @@ namespace Inquisitor
 
         private void LoadInformation()
         {
-            inputLines = System.IO.File.ReadAllLines(@"C:\Users\intro\documents\Inquisitor\inquisitor1.txt");
+            inputLines = System.IO.File.ReadAllLines(@"..\..\stats\inquisitor1.txt");
 
             BAB = int.Parse(inputLines[0]);
             DEX = int.Parse(inputLines[1]);
