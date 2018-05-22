@@ -272,6 +272,14 @@ namespace Inquisitor
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadInformation();
+            txtToolStrip.Text = "Loaded"; 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Character test = new Character("Smithy", 1, "Inquisitor");
+            Console.WriteLine(test.Name1 + test.SpellsPerDay11);
+            Console.ReadLine();
         }
     }
 }
