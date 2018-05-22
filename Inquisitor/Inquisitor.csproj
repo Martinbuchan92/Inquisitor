@@ -98,6 +98,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Stats\inquisitor.pdf" />
+    <None Include="Stats\Knowledge.csv" />
+    <None Include="Stats\Skills.csv" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
