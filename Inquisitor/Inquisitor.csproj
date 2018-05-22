@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>d20-icon-34404-16x16.ico</ApplicationIcon>
+    <ApplicationIcon>Iconcubic-Dnd-Dice-D20.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="Calculations.cs" />
     <Compile Include="Inquisitor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,12 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="d20-icon-34404-16x16.ico" />
+    <Content Include="Iconcubic-Dnd-Dice-D20.ico" />
+    <Content Include="Resources\Iconcubic-Dnd-Dice-D20.ico" />
     <Content Include="Stats\abilities.txt" />
     <Content Include="Stats\ability.txt" />
     <Content Include="Stats\inquisitor1.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

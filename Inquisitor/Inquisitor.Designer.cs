@@ -81,7 +81,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtCharacterName = new System.Windows.Forms.TextBox();
+            this.txtCharacterClass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nupBAB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSTR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDEX)).BeginInit();
@@ -100,12 +102,13 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // nupBAB
             // 
-            this.nupBAB.Location = new System.Drawing.Point(617, 69);
-            this.nupBAB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupBAB.Location = new System.Drawing.Point(88, 122);
+            this.nupBAB.Margin = new System.Windows.Forms.Padding(2);
             this.nupBAB.Name = "nupBAB";
             this.nupBAB.Size = new System.Drawing.Size(60, 20);
             this.nupBAB.TabIndex = 0;
@@ -119,7 +122,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(541, 70);
+            this.label1.Location = new System.Drawing.Point(12, 123);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
@@ -139,7 +142,7 @@
             // nupSTR
             // 
             this.nupSTR.Location = new System.Drawing.Point(84, 17);
-            this.nupSTR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupSTR.Margin = new System.Windows.Forms.Padding(2);
             this.nupSTR.Name = "nupSTR";
             this.nupSTR.Size = new System.Drawing.Size(60, 20);
             this.nupSTR.TabIndex = 3;
@@ -162,7 +165,7 @@
             // nupDEX
             // 
             this.nupDEX.Location = new System.Drawing.Point(84, 36);
-            this.nupDEX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupDEX.Margin = new System.Windows.Forms.Padding(2);
             this.nupDEX.Name = "nupDEX";
             this.nupDEX.Size = new System.Drawing.Size(60, 20);
             this.nupDEX.TabIndex = 5;
@@ -187,9 +190,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(156, 199);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
@@ -198,7 +201,7 @@
             // nupWIS
             // 
             this.nupWIS.Location = new System.Drawing.Point(84, 94);
-            this.nupWIS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupWIS.Margin = new System.Windows.Forms.Padding(2);
             this.nupWIS.Name = "nupWIS";
             this.nupWIS.Size = new System.Drawing.Size(60, 20);
             this.nupWIS.TabIndex = 11;
@@ -211,7 +214,7 @@
             // nupCHA
             // 
             this.nupCHA.Location = new System.Drawing.Point(84, 113);
-            this.nupCHA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupCHA.Margin = new System.Windows.Forms.Padding(2);
             this.nupCHA.Name = "nupCHA";
             this.nupCHA.Size = new System.Drawing.Size(60, 20);
             this.nupCHA.TabIndex = 13;
@@ -239,7 +242,7 @@
             // nupCON
             // 
             this.nupCON.Location = new System.Drawing.Point(84, 55);
-            this.nupCON.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupCON.Margin = new System.Windows.Forms.Padding(2);
             this.nupCON.Name = "nupCON";
             this.nupCON.Size = new System.Drawing.Size(60, 20);
             this.nupCON.TabIndex = 7;
@@ -252,7 +255,7 @@
             // nupINT
             // 
             this.nupINT.Location = new System.Drawing.Point(84, 74);
-            this.nupINT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupINT.Margin = new System.Windows.Forms.Padding(2);
             this.nupINT.Name = "nupINT";
             this.nupINT.Size = new System.Drawing.Size(60, 20);
             this.nupINT.TabIndex = 9;
@@ -280,7 +283,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(541, 21);
+            this.label7.Location = new System.Drawing.Point(12, 99);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 13);
@@ -289,8 +292,8 @@
             // 
             // nupWeaponEnhancementBonus
             // 
-            this.nupWeaponEnhancementBonus.Location = new System.Drawing.Point(617, 20);
-            this.nupWeaponEnhancementBonus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupWeaponEnhancementBonus.Location = new System.Drawing.Point(88, 98);
+            this.nupWeaponEnhancementBonus.Margin = new System.Windows.Forms.Padding(2);
             this.nupWeaponEnhancementBonus.Name = "nupWeaponEnhancementBonus";
             this.nupWeaponEnhancementBonus.Size = new System.Drawing.Size(60, 20);
             this.nupWeaponEnhancementBonus.TabIndex = 10;
@@ -303,7 +306,7 @@
             // btnD20
             // 
             this.btnD20.Location = new System.Drawing.Point(19, 423);
-            this.btnD20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnD20.Margin = new System.Windows.Forms.Padding(2);
             this.btnD20.Name = "btnD20";
             this.btnD20.Size = new System.Drawing.Size(60, 21);
             this.btnD20.TabIndex = 9;
@@ -314,15 +317,15 @@
             // txtD20
             // 
             this.txtD20.Location = new System.Drawing.Point(19, 398);
-            this.txtD20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtD20.Margin = new System.Windows.Forms.Padding(2);
             this.txtD20.Name = "txtD20";
-            this.txtD20.Size = new System.Drawing.Size(52, 20);
+            this.txtD20.Size = new System.Drawing.Size(60, 20);
             this.txtD20.TabIndex = 8;
             // 
             // nupLVL
             // 
-            this.nupLVL.Location = new System.Drawing.Point(617, 50);
-            this.nupLVL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupLVL.Location = new System.Drawing.Point(88, 74);
+            this.nupLVL.Margin = new System.Windows.Forms.Padding(2);
             this.nupLVL.Name = "nupLVL";
             this.nupLVL.Size = new System.Drawing.Size(60, 20);
             this.nupLVL.TabIndex = 7;
@@ -336,7 +339,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(541, 51);
+            this.label6.Location = new System.Drawing.Point(12, 75);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
@@ -355,9 +358,9 @@
             this.groupBox2.Controls.Add(this.nupLv3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(174, 6);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(173, 199);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
@@ -366,7 +369,7 @@
             // btnSkills
             // 
             this.btnSkills.Location = new System.Drawing.Point(94, 168);
-            this.btnSkills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSkills.Margin = new System.Windows.Forms.Padding(2);
             this.btnSkills.Name = "btnSkills";
             this.btnSkills.Size = new System.Drawing.Size(76, 28);
             this.btnSkills.TabIndex = 8;
@@ -377,7 +380,7 @@
             // btnSpellList
             // 
             this.btnSpellList.Location = new System.Drawing.Point(8, 168);
-            this.btnSpellList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSpellList.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpellList.Name = "btnSpellList";
             this.btnSpellList.Size = new System.Drawing.Size(76, 28);
             this.btnSpellList.TabIndex = 7;
@@ -389,7 +392,7 @@
             // 
             this.chkBane.AutoSize = true;
             this.chkBane.Location = new System.Drawing.Point(16, 116);
-            this.chkBane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkBane.Margin = new System.Windows.Forms.Padding(2);
             this.chkBane.Name = "chkBane";
             this.chkBane.Size = new System.Drawing.Size(51, 17);
             this.chkBane.TabIndex = 6;
@@ -400,7 +403,7 @@
             // 
             this.chkJustice.AutoSize = true;
             this.chkJustice.Location = new System.Drawing.Point(16, 82);
-            this.chkJustice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkJustice.Margin = new System.Windows.Forms.Padding(2);
             this.chkJustice.Name = "chkJustice";
             this.chkJustice.Size = new System.Drawing.Size(59, 17);
             this.chkJustice.TabIndex = 5;
@@ -411,7 +414,7 @@
             // 
             this.chkDestruction.AutoSize = true;
             this.chkDestruction.Location = new System.Drawing.Point(16, 63);
-            this.chkDestruction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkDestruction.Margin = new System.Windows.Forms.Padding(2);
             this.chkDestruction.Name = "chkDestruction";
             this.chkDestruction.Size = new System.Drawing.Size(80, 17);
             this.chkDestruction.TabIndex = 4;
@@ -421,7 +424,7 @@
             // nupLv5
             // 
             this.nupLv5.Location = new System.Drawing.Point(74, 43);
-            this.nupLv5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupLv5.Margin = new System.Windows.Forms.Padding(2);
             this.nupLv5.Name = "nupLv5";
             this.nupLv5.Size = new System.Drawing.Size(60, 20);
             this.nupLv5.TabIndex = 3;
@@ -439,7 +442,7 @@
             // nupLv3
             // 
             this.nupLv3.Location = new System.Drawing.Point(74, 23);
-            this.nupLv3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupLv3.Margin = new System.Windows.Forms.Padding(2);
             this.nupLv3.Name = "nupLv3";
             this.nupLv3.Size = new System.Drawing.Size(60, 20);
             this.nupLv3.TabIndex = 1;
@@ -458,7 +461,7 @@
             // 
             this.chkPointBlank.AutoSize = true;
             this.chkPointBlank.Location = new System.Drawing.Point(10, 46);
-            this.chkPointBlank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkPointBlank.Margin = new System.Windows.Forms.Padding(2);
             this.chkPointBlank.Name = "chkPointBlank";
             this.chkPointBlank.Size = new System.Drawing.Size(107, 17);
             this.chkPointBlank.TabIndex = 8;
@@ -469,7 +472,7 @@
             // 
             this.chkRapidShot.AutoSize = true;
             this.chkRapidShot.Location = new System.Drawing.Point(10, 28);
-            this.chkRapidShot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkRapidShot.Margin = new System.Windows.Forms.Padding(2);
             this.chkRapidShot.Name = "chkRapidShot";
             this.chkRapidShot.Size = new System.Drawing.Size(79, 17);
             this.chkRapidShot.TabIndex = 7;
@@ -480,9 +483,9 @@
             // 
             this.groupBox3.Controls.Add(this.chkEvil);
             this.groupBox3.Location = new System.Drawing.Point(363, 6);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(158, 76);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
@@ -492,7 +495,7 @@
             // 
             this.chkEvil.AutoSize = true;
             this.chkEvil.Location = new System.Drawing.Point(10, 24);
-            this.chkEvil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkEvil.Margin = new System.Windows.Forms.Padding(2);
             this.chkEvil.Name = "chkEvil";
             this.chkEvil.Size = new System.Drawing.Size(43, 17);
             this.chkEvil.TabIndex = 0;
@@ -505,9 +508,9 @@
             this.groupBox4.Controls.Add(this.txtAttack);
             this.groupBox4.Controls.Add(this.btnAttack);
             this.groupBox4.Location = new System.Drawing.Point(8, 213);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(340, 72);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
@@ -517,7 +520,7 @@
             // 
             this.ChkCrit.AutoSize = true;
             this.ChkCrit.Location = new System.Drawing.Point(254, 19);
-            this.ChkCrit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChkCrit.Margin = new System.Windows.Forms.Padding(2);
             this.ChkCrit.Name = "ChkCrit";
             this.ChkCrit.Size = new System.Drawing.Size(41, 17);
             this.ChkCrit.TabIndex = 2;
@@ -527,7 +530,7 @@
             // txtAttack
             // 
             this.txtAttack.Location = new System.Drawing.Point(11, 18);
-            this.txtAttack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAttack.Margin = new System.Windows.Forms.Padding(2);
             this.txtAttack.Multiline = true;
             this.txtAttack.Name = "txtAttack";
             this.txtAttack.Size = new System.Drawing.Size(242, 52);
@@ -536,7 +539,7 @@
             // btnAttack
             // 
             this.btnAttack.Location = new System.Drawing.Point(254, 45);
-            this.btnAttack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAttack.Margin = new System.Windows.Forms.Padding(2);
             this.btnAttack.Name = "btnAttack";
             this.btnAttack.Size = new System.Drawing.Size(72, 23);
             this.btnAttack.TabIndex = 0;
@@ -551,9 +554,9 @@
             this.groupBox5.Controls.Add(this.txtDamage);
             this.groupBox5.Controls.Add(this.btnDamage);
             this.groupBox5.Location = new System.Drawing.Point(8, 288);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(340, 83);
             this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
@@ -561,8 +564,8 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(254, 18);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(257, 21);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(72, 23);
             this.btnClear.TabIndex = 4;
@@ -573,7 +576,7 @@
             // txtTotalDamage
             // 
             this.txtTotalDamage.Location = new System.Drawing.Point(200, 48);
-            this.txtTotalDamage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotalDamage.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalDamage.Name = "txtTotalDamage";
             this.txtTotalDamage.Size = new System.Drawing.Size(52, 20);
             this.txtTotalDamage.TabIndex = 3;
@@ -581,7 +584,7 @@
             // txtDamage
             // 
             this.txtDamage.Location = new System.Drawing.Point(11, 21);
-            this.txtDamage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDamage.Margin = new System.Windows.Forms.Padding(2);
             this.txtDamage.Multiline = true;
             this.txtDamage.Name = "txtDamage";
             this.txtDamage.Size = new System.Drawing.Size(242, 49);
@@ -589,8 +592,8 @@
             // 
             // btnDamage
             // 
-            this.btnDamage.Location = new System.Drawing.Point(254, 45);
-            this.btnDamage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDamage.Location = new System.Drawing.Point(257, 47);
+            this.btnDamage.Margin = new System.Windows.Forms.Padding(2);
             this.btnDamage.Name = "btnDamage";
             this.btnDamage.Size = new System.Drawing.Size(72, 23);
             this.btnDamage.TabIndex = 1;
@@ -604,7 +607,7 @@
             this.chkHammerGap.Checked = true;
             this.chkHammerGap.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkHammerGap.Location = new System.Drawing.Point(10, 64);
-            this.chkHammerGap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkHammerGap.Margin = new System.Windows.Forms.Padding(2);
             this.chkHammerGap.Name = "chkHammerGap";
             this.chkHammerGap.Size = new System.Drawing.Size(106, 17);
             this.chkHammerGap.TabIndex = 1;
@@ -617,9 +620,9 @@
             this.groupBox6.Controls.Add(this.chkHammerGap);
             this.groupBox6.Controls.Add(this.chkRapidShot);
             this.groupBox6.Location = new System.Drawing.Point(363, 88);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(158, 116);
             this.groupBox6.TabIndex = 11;
             this.groupBox6.TabStop = false;
@@ -630,22 +633,22 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.txtToolStrip});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 456);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 459);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(726, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(543, 22);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // txtToolStrip
             // 
             this.txtToolStrip.Name = "txtToolStrip";
-            this.txtToolStrip.Size = new System.Drawing.Size(0, 17);
+            this.txtToolStrip.Size = new System.Drawing.Size(0, 0);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(445, 332);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(445, 408);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(76, 36);
             this.btnClose.TabIndex = 13;
@@ -656,16 +659,16 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(374, 223);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Location = new System.Drawing.Point(299, 397);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 21);
             this.comboBox1.TabIndex = 14;
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(446, 251);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoad.Location = new System.Drawing.Point(371, 425);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(68, 20);
             this.btnLoad.TabIndex = 15;
@@ -675,8 +678,8 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(375, 251);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Location = new System.Drawing.Point(300, 425);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(68, 20);
             this.btnSave.TabIndex = 16;
@@ -684,31 +687,46 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button1
+            // groupBox7
             // 
-            this.button1.Location = new System.Drawing.Point(547, 224);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.groupBox7.Controls.Add(this.txtCharacterClass);
+            this.groupBox7.Controls.Add(this.txtCharacterName);
+            this.groupBox7.Controls.Add(this.nupLVL);
+            this.groupBox7.Controls.Add(this.label6);
+            this.groupBox7.Controls.Add(this.label7);
+            this.groupBox7.Controls.Add(this.nupWeaponEnhancementBonus);
+            this.groupBox7.Controls.Add(this.nupBAB);
+            this.groupBox7.Controls.Add(this.label1);
+            this.groupBox7.Location = new System.Drawing.Point(363, 213);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(158, 158);
+            this.groupBox7.TabIndex = 17;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Character";
+            // 
+            // txtCharacterName
+            // 
+            this.txtCharacterName.Location = new System.Drawing.Point(15, 23);
+            this.txtCharacterName.Name = "txtCharacterName";
+            this.txtCharacterName.Size = new System.Drawing.Size(133, 20);
+            this.txtCharacterName.TabIndex = 12;
+            // 
+            // txtCharacterClass
+            // 
+            this.txtCharacterClass.Location = new System.Drawing.Point(15, 49);
+            this.txtCharacterClass.Name = "txtCharacterClass";
+            this.txtCharacterClass.Size = new System.Drawing.Size(133, 20);
+            this.txtCharacterClass.TabIndex = 13;
             // 
             // Inquisitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 478);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.nupLVL);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(543, 481);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.nupWeaponEnhancementBonus);
-            this.Controls.Add(this.nupBAB);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.txtD20);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnD20);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnClose);
@@ -721,7 +739,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inquisitor";
             this.Text = "Inquisitor 14.01";
             this.Load += new System.EventHandler(this.Inquisitor_Load);
@@ -750,6 +768,8 @@
             this.groupBox6.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -809,7 +829,9 @@
         private System.Windows.Forms.NumericUpDown nupINT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtCharacterClass;
+        private System.Windows.Forms.TextBox txtCharacterName;
     }
 }
 
