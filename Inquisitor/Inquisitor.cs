@@ -272,8 +272,14 @@ namespace Inquisitor
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadInformation();
+
             txtToolStrip.Text = "Loaded"; 
         }
 
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            Program.NewCharacter(txtCharacterName.Text, (int)nupLVL.Value, txtCharacterClass.Text);
+            CmbCharacters.Items.Add(txtCharacterName.Text);
+        }
     }
 }

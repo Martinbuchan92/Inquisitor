@@ -9,17 +9,17 @@ Disguise,1,0
 Escape Artist,0,0
 Fly,0,0
 Handle Animal,0,0
-Heal,1,0
-Intimidate,1,0
-Linguistics,0,0
-Perception,1,0
+Heal,1,1
+Intimidate,1,14
+Linguistics,0,14
+Perception,1,14
 Perform,0,0
-Profession,1,0
+Profession,1,14
 Ride,1,0
-Sense Motive,1,0
-Sleight of Hand,0,0
-Spellcraft,1,0
-Stealth,1,0
-Survival,1,0
-Swim,1,0
+Sense Motive,1,14
+Sleight of Hand,0,1
+Spellcraft,1,14
+Stealth,1,14
+Survival,1,1
+Swim,1,1
 Use Magic Devices,0,0

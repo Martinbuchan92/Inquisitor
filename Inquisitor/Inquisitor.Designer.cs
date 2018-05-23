@@ -78,12 +78,13 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtToolStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CmbCharacters = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txtCharacterName = new System.Windows.Forms.TextBox();
             this.txtCharacterClass = new System.Windows.Forms.TextBox();
+            this.txtCharacterName = new System.Windows.Forms.TextBox();
+            this.BtnNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupBAB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSTR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDEX)).BeginInit();
@@ -656,14 +657,14 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // comboBox1
+            // CmbCharacters
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(299, 397);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 21);
-            this.comboBox1.TabIndex = 14;
+            this.CmbCharacters.FormattingEnabled = true;
+            this.CmbCharacters.Location = new System.Drawing.Point(299, 397);
+            this.CmbCharacters.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbCharacters.Name = "CmbCharacters";
+            this.CmbCharacters.Size = new System.Drawing.Size(142, 21);
+            this.CmbCharacters.TabIndex = 14;
             // 
             // btnLoad
             // 
@@ -704,13 +705,6 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Character";
             // 
-            // txtCharacterName
-            // 
-            this.txtCharacterName.Location = new System.Drawing.Point(15, 23);
-            this.txtCharacterName.Name = "txtCharacterName";
-            this.txtCharacterName.Size = new System.Drawing.Size(133, 20);
-            this.txtCharacterName.TabIndex = 12;
-            // 
             // txtCharacterClass
             // 
             this.txtCharacterClass.Location = new System.Drawing.Point(15, 49);
@@ -718,17 +712,35 @@
             this.txtCharacterClass.Size = new System.Drawing.Size(133, 20);
             this.txtCharacterClass.TabIndex = 13;
             // 
+            // txtCharacterName
+            // 
+            this.txtCharacterName.Location = new System.Drawing.Point(15, 23);
+            this.txtCharacterName.Name = "txtCharacterName";
+            this.txtCharacterName.Size = new System.Drawing.Size(133, 20);
+            this.txtCharacterName.TabIndex = 12;
+            // 
+            // BtnNew
+            // 
+            this.BtnNew.Location = new System.Drawing.Point(182, 408);
+            this.BtnNew.Name = "BtnNew";
+            this.BtnNew.Size = new System.Drawing.Size(75, 23);
+            this.BtnNew.TabIndex = 18;
+            this.BtnNew.Text = "New";
+            this.BtnNew.UseVisualStyleBackColor = true;
+            this.BtnNew.Click += new System.EventHandler(this.BtnNew_Click);
+            // 
             // Inquisitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 481);
+            this.Controls.Add(this.BtnNew);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.txtD20);
             this.Controls.Add(this.btnD20);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CmbCharacters);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox6);
@@ -741,7 +753,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inquisitor";
-            this.Text = "Inquisitor 14.01";
+            this.Text = "Inquisitor 15.00";
             this.Load += new System.EventHandler(this.Inquisitor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupBAB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSTR)).EndInit();
@@ -818,7 +830,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel txtToolStrip;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbCharacters;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.NumericUpDown nupWIS;
@@ -832,6 +844,7 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox txtCharacterClass;
         private System.Windows.Forms.TextBox txtCharacterName;
+        private System.Windows.Forms.Button BtnNew;
     }
 }
 

@@ -18,8 +18,12 @@ namespace Inquisitor
         private int BaseAttackBonus;
         private int SpellsPerDay1;
         
+        public Character()
+        {
 
-        public Character(String Name, int Level, String Class)
+        }
+
+        public Character(String Name, int Level, String Class) : this()
         {
             Level1 = Level;
             Name1 = Name;

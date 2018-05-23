@@ -50,5 +50,11 @@ namespace Inquisitor
 
             return null;
         }
+
+        public static void NewCharacter(String Name, int Level, string Class)
+        {
+            Character NewGuy = new Character(Name, Level, Class);
+            
+        }
     }
 }
